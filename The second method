@@ -1,0 +1,23 @@
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.Icon;
+import javax.swing.ImageIcon;
+import java.awt.Font;
+import java.awt.Color;
+import java.io.*;
+public class T{
+	public static void main(String[] args){
+		JFrame f = new JFrame("This is my first swing component!");
+		String str = "E:\\java\\dog.jpg";
+		Icon icon = new ImageIcon(str);
+		JLabel label = new JLabel("I like Java!!!",icon,JLabel.CENTER);
+		Font font = new Font("宋体",Font.ITALIC+Font.BOLD,33);
+		label.setFont(font);
+		label.setForeground(Color.RED);
+		f.add(label);
+		f.setSize(500,300);
+		f.setBackground(Color.GREEN);
+		f.setLocation(300,100);
+		f.setVisible(true);
+	}
+}
